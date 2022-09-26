@@ -29,11 +29,11 @@ jobs:
       run: |
         pytest
     
-    shell-scripts:
-      runs-on: ubuntu-latest
+  shell-scripts:
+    runs-on: ubuntu-latest
 
-      needs: test
-      steps:
-      - name: Executar scripts versionados
-        uses: actions/checkout@v3
-      - run: sh scripts/shell.sh
+    needs: test
+    steps:
+    - name: Executar scripts versionados
+      uses: actions/checkout@v3
+    - run: sh scripts/shell.sh
