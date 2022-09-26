@@ -36,7 +36,6 @@ jobs:
       steps:
       - name: Executar scripts versionados
         uses: actions/checkout@v3
-        email: ${EMAIL}
       - run: |
-        export EMAIL=email
+        export EMAIL=${EMAIL}
         sh scripts/shell.sh
